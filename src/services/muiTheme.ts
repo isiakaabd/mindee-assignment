@@ -1,38 +1,23 @@
 import { createTheme } from "@mui/material/styles";
 
-import "@mui/material/styles/createPalette";
-declare module "@mui/material/styles/createPalette" {
-  interface CommonColors {
-    lightGrey: string;
-    darkGreen: string;
-    green: string;
-  }
-}
-const lightGrey = "#5F5C5C";
-const darkGreen = "#044402";
-const green = "#37D42A";
+const lightRed = "#fd3145";
+
+const blue = "#011e3c";
 
 export const muiTheme = createTheme({
   palette: {
-    common: {
-      lightGrey,
-    },
     primary: {
-      main: green,
-    },
-
-    secondary: {
-      main: lightGrey,
+      main: blue,
+      dark: lightRed,
     },
   },
   typography: {
-    fontFamily: ["Raleway", "sans-serif", "Roboto"].join(", "),
+    fontFamily: ["Montserrat", "sans-serif"].join(", "),
     fontSize: 10,
     htmlFontSize: 10,
     h1: {
       fontSize: "clamp(1.5rem, 2vw, 1.2rem)",
       fontWeight: 700,
-      color: darkGreen,
     },
 
     body1: {
@@ -42,6 +27,9 @@ export const muiTheme = createTheme({
     body2: {
       fontSize: "1.2rem",
       fontWeight: 400,
+    },
+    button: {
+      background: lightRed,
     },
   },
 });
